@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Metadata and Title -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <!-- Stylesheet and Script -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="wordle.js"></script>
+  </head>
+  <body>
+    <!-- Game Title and Buttons -->
+    <h1 id="title" style="display: flex; justify-content: flex-end;">
+      <div style="flex: 1; text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wordle</div>
+      <span id="toggle-dark-mode" style="margin-left: 10px;">
+        <span>&#9681;</span>
+      </span>
+      <span id="hint-button" style="margin-left: 10px;">
+        <span>&#63;</span>
+      </span>
+      <span id="info-icon" style="margin-left: 10px;">
+        <span>&#9432;</span>
+      </span>
+    </h1>
+    <hr>
+    <br>
+    <!-- Game Container and Start Over Button -->
+    <div class="game-container">
+      <div id="board"></div>
+      <span>
+        <button id="start-over-button" style="background-color: rgb(134, 166, 134);">Start Over</button>
+      </span>
+    </div>
+    <!-- Info Container and Text -->
+    <div class="info-container" style="display: flex;">
+      <div id="info-text" class="content">
+        <ul>
+          <strong>
+            <p>How To Play</p>
+          </strong>
+          <li>Start typing. The letters will appear in the boxes</li>
+          <li>Remove letters with Backspace</li>
+          <li>Hit Enter/Return to submit an answer</li>
+          <li>Letters with green background are in the right spot</li>
+          <li>Letters with yellow background exist in the word, but are in the wrong spots</li>
+          <li>Letters with gray background do not exist in the word</li>
+          <li>If you need a hint, click the &#63 icon</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Hint Display and Congrats GIF -->
+    <br>
+    <div id="hint-display"></div>
+    <div id="congrats" style="display: none;">
+      <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="Congratulations!" />
+    </div>
+    <!-- Dark Mode Script -->
+    <script>
+      const toggleDarkMode = document.getElementById('toggle-dark-mode');
+      const body = document.body;
+      toggleDarkMode.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+      });
+    </script>
+    <script>
+      // Hint button functionality
+      const hintButton = document.getElementById("hint-button");
+      const hintDisplay = document.getElementById("hint-display");
+      hintButton.addEventListener("click", function() {
+        // Check if hint display is hidden
+        if (hintDisplay.style.display === "none") {
+          // Replace with your hint text
+          hintDisplay.innerHTML = "<em>Hint:</em> " + hint + ".";
+
+          // Set the text content of the hint display element
+          hintDisplay.style.display = "block"; // Show the hint display element
+        } else {
+          hintDisplay.style.display = "none"; // Hide the hint display element
+        }
+      });
+      // Other code to reset the game or activity
+      // Info icon functionality
+      const infoIcon = document.getElementById("info-icon");
+      const infoText = document.getElementById("info-text");
+      const gameContainer = document.querySelector(".game-container");
+      const startOverButton = document.getElementById("start-over-button");
+      const infoContainer = document.querySelector(".info-container");
+      infoIcon.addEventListener("click", function() {
+        // Check if info container is hidden
+        if (infoContainer.style.display === "none") {
+          // Show info container and text, adjust game container width and start over button margin
+          infoContainer.style.display = "block";
+          infoText.style.display = "block";
+          gameContainer.style.width = "50%";
+          startOverButton.style.margin = "0 auto";
+          infoContainer.style.width = "50%";
+          infoContainer.style.display = "flex";
+          infoContainer.style.justifyContent = "flex-end";
+        } else {
+          // Hide info container and text, reset game container width and start over button margin
+          infoContainer.style.display = "none";
+          infoText.style.display = "none";
+          gameContainer.style.width = "100%";
+          startOverButton.style.margin = "0";
+        }
+      });
+    </script>
+    <!-- Message and answer displays -->
+    <div id="message"></div>
+    <div id="answer"></div>
+    <!-- Footer -->
+    <footer> &#169 FM </footer>
+  </body>
+</html>

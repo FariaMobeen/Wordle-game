@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+hr{
+  width: 2000px;
+
+ }
+
+ #title {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+ }
+
+ #board {
+  width: 350px;
+  height: 350px;
+
+  margin: 0 auto;
+  margin-top: 3px;
+  display:  flex;
+  flex-wrap: wrap;
+
+ }
+
+ .tile{
+  border: 2px solid lightgrey;
+  width: 72px;
+  height: 60px;
+  margin: 2.5px;
+
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .correct{
+  background-color: #6AAA64;
+  color: white;
+  border-color: white;
+ }
+
+ .present{
+  background-color: #C9B458;
+  color: white;
+  border-color: white;
+ }
+
+ .absent{
+  background-color: #787C7E;
+  color: white;
+  border-color: white;
+ }
+
+ .dark-mode {
+  background-color: #202020;
+  color: #f0f0f0;
+}
+
+.dark-mode h1 {
+  color: #f0f0f0;
+}
+
+.dark-mode #info-text {
+  background-color: #444;
+  color: #f0f0f0;
+}
+.dark-mode .tile {
+  color: white;
+}
+
+#hint-display {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  width: 100%;
+  background-color: #bcb3b3;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+footer {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#congrats {
+  position: absolute;
+  top: 80px; /* adjust the value as needed to clear the menu bar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* adjust the value as needed to subtract the menu bar height from the container height */
+  background-color: rgba(255, 255, 255);
+  z-index: 1;
+}
+
+
+
+#start-over-button{
+  width: 150px;
+  height: 70px;
+  font-size: 16px;
+  z-index: 2;
+  position: relative; /* add position relative to allow z-index to work */
+
+}
+/* Styles for the toggle dark mode icon */
+#toggle-dark-mode span {
+  padding: 20px; /* Add padding to increase the area around the hint button */
+}
+#toggle-dark-mode span:hover,
+#toggle-dark-mode span:focus,
+#toggle-dark-mode span:active {
+  background-color: lightgray; /* Change the background color to light gray when hovering/clicking */
+  cursor: pointer
+}
+
+/* Styles for the hint button icon */
+#hint-button span {
+  padding: 20px; /* Add padding to increase the area around the hint button */
+}
+
+#hint-button span:hover,
+#hint-button span:focus,
+#hint-button span:active {
+  background-color: lightgray; /* Change the background color to light gray when hovering/clicking */
+  cursor: pointer
+}
+
+#info-icon span {
+  padding: 20px; /* Add padding to increase the area around the hint button */
+}
+/* Styles for the info icon */
+#info-icon span:hover,
+#info-icon span:focus,
+#info-icon span:active {
+  background-color: lightgray; /* Change the background color to light gray when hovering/clicking */
+  cursor: pointer
+}
+
+#start-over-button:hover,
+#start-over-button:focus,
+#start-over-button:active  {
+  background-color: darkgreen;
+  cursor: pointer; /* optional: change cursor to pointer when hovering over button */
+}
+#info-text {
+  display: none;
+  width: 50%;
+  float: right;
+  background-color: white;
+  height: 90vh;
+  position: fixed;
+  top: 94px;
+  bottom: 10px;
+  right: 0;
+  border-left: 1px solid black;
+}
+
+
+
+ul {
+  list-style-type: circle;
+  text-align: left;
+}
+
+li {
+  color: black;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+#message {
+  position: relative;
+  bottom: 0px; /* adjust the value as needed */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#answer {
+  color: white;
+}
+/* Rest of your CSS styles */
