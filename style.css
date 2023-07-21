@@ -69,7 +69,7 @@ hr{
 }
 
 .dark-mode #info-text {
-  background-color: #444;
+  background-color: darkgrey;
   color: #f0f0f0;
 }
 .dark-mode .tile {

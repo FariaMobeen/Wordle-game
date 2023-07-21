@@ -11,13 +11,12 @@
   </head>
   <body>
     <!-- Game Title and Buttons -->
-    <h1 id="title" style="display: flex; justify-content: flex-end;">
+    <h1 id="title" style="display: flex;justify-content: flex-end;border-bottom: 1px solid #808080;">
       <div style="flex: 1; text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wordle 
       
-      <br/>
-      <h2 class="subheading" style="
-      margin-left: 13.5pc;
-  ">Clone</h2>
+      <br>
+      <p class="subheading" style="
+      margin-left: 13.5pc;">Clone </p>
     </div>
     <style>
       /* Define the style for the subheading */
@@ -26,17 +25,17 @@
           font-size: 14px; /* Smaller font size (adjust as needed) */
       }
   </style>
-      <span id="toggle-dark-mode" style="margin-left: 10px;">
-        <span>&#9681;</span>
+     <span id="toggle-dark-mode" style="margin-left: 10px;margin-top: 11px;">
+      <span>◑</span>
+    </span>
+      <span id="hint-button" style="margin-left: 10px;margin-top: 11px;">
+        <span>?</span>
       </span>
-      <span id="hint-button" style="margin-left: 10px;">
-        <span>&#63;</span>
-      </span>
-      <span id="info-icon" style="margin-left: 10px;">
-        <span>&#9432;</span>
+      <span id="info-icon" style="margin-left: 10px;margin-top: 11px;">
+        <span>ⓘ</span>
       </span>
     </h1>
-    <hr>
+   
     <br>
     <!-- Game Container and Start Over Button -->
     <div class="game-container">
@@ -46,11 +45,11 @@
       </span>
     </div>
     <!-- Info Container and Text -->
-    <div class="info-container" style="display: flex;">
-      <div id="info-text" class="content">
+    <div class="info-container" style="display: flex;" >
+      <div id="info-text" class="content" style="margin-top: 17px; font-weight: 700;">
         <ul>
           <strong>
-            <p>How To Play</p>
+            <p style="font-weight: 800;">How To Play</p>
           </strong>
           <li>Start typing. The letters will appear in the boxes</li>
           <li>Remove letters with Backspace</li>
