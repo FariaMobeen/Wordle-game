@@ -3,6 +3,10 @@ export default async (request) => {
             {
                 "dictionary": [
                     {
+                        "word": "Game",
+                        "hint": "Play when you're bored",
+                    },
+                    {
                         "word": "Pain",
                         "hint": "Attending any class other than ENSF 381 gives you ____",
                     },
