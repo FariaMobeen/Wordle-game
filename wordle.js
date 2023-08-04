@@ -24,7 +24,7 @@ async function getRandomWord() {
 
     if (!dictionary) {
         // Make API call to get dictionary if it hasn't been loaded yet
-        const response = await fetch(process.env.WORDLE_URL);
+        const response = await fetch("/.netlify/functions/api");
 
         if (response.ok) {
             // Parse response and store dictionary
