@@ -24,11 +24,7 @@ async function getRandomWord() {
 
     if (!dictionary) {
         // Make API call to get dictionary if it hasn't been loaded yet
-        const response = await fetch("https://api.masoudkf.com/v1/wordle", {
-            headers: {
-                "x-api-key": "sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv",
-            },
-        });
+        const response = await fetch(process.env.WORDLE_URL);
 
         if (response.ok) {
             // Parse response and store dictionary
